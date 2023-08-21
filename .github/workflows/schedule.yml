@@ -3,7 +3,7 @@ on:
   push:
   workflow_dispatch:  
   schedule:
-    - cron: "20 0 * * 1"
+    - cron: "10 0 * * 1"
 jobs:
   curl-post:
     runs-on: ubuntu-latest
@@ -26,7 +26,7 @@ jobs:
                 -H 'cookie: ${{ secrets.COOKIE }}' \
                 -H 'origin: https://app.semana.io' \
                 -H 'pragma: no-cache' \
-                -H 'referer: https://app.semana.io/cospirit/floorplan?d=2023-04-14&f=740' \
+                -H 'referer: https://app.semana.io/cospirit/floorplan?d=today&f=740' \
                 -H 'sec-ch-ua: "Chromium";v="110", "Not A(Brand";v="24", "Google Chrome";v="110"' \
                 -H 'sec-ch-ua-mobile: ?0' \
                 -H 'sec-ch-ua-platform: "Linux"' \
